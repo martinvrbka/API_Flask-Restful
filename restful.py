@@ -97,7 +97,7 @@ class Trips(Resource):
     def get(self, username):
         for customer in customers:
             if customer["username"] == username:
-                return {"trips": customer["trips"]}
+                return {"trips": customer["trips"]}, 200
             return {"message": "Username not found"}, 404
 
 
@@ -115,11 +115,8 @@ class Trips(Resource):
         return {"message": "Username not found"}, 404
 
 
-
-if __name__=='__main__':
+if __name__ == '__main__':
     api.add_resource(Customers, '/customers')
     api.add_resource(Customer, '/customer/<string:username>')
     api.add_resource(Trips, '/customer/<string:username>/trips')
     app.run(port=3333, debug=True)
-
-
