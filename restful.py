@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 from auth import api_key_required
-from flask import request
 
 customers = [
              {
