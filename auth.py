@@ -1,6 +1,6 @@
 from flask import request
 
-API_KEY = '9d5a98dc-9d3e-11ec-ab40-23e9218cb75d'
+API_KEY = 'af2ca902-9d42-11ec-ab40-23e9218cb75d'
 
 def api_key_required(decorated_method):
     def wrapper(*args, **kwargs):
